@@ -1,0 +1,11 @@
+CREATE TABLE biblioteca.prestito (
+	id INT auto_increment NOT NULL,
+	datainizio DATE NOT NULL,
+	durataprestito INT NOT NULL,
+	CONSTRAINT prestito_pk PRIMARY KEY (id),
+	CONSTRAINT prestito_FK FOREIGN KEY (id) REFERENCES biblioteca.books(id),
+	CONSTRAINT prestito_FK_1 FOREIGN KEY (id) REFERENCES biblioteca.utente(id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;

@@ -1,0 +1,9 @@
+CREATE TABLE `books` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `author` varchar(200) NOT NULL,
+  `year` year NOT NULL,
+  `isbn` char(13) NOT NULL,
+  `genre` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

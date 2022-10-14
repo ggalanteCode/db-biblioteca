@@ -1,0 +1,11 @@
+CREATE TABLE biblioteca.utente (
+	id INT auto_increment NOT NULL,
+	nome varchar(50) NOT NULL,
+	cognome varchar(50) NOT NULL,
+	email varchar(60) NOT NULL,
+	indirizzo varchar(50) NOT NULL,
+	CONSTRAINT utente_pk PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
