@@ -6,3 +6,6 @@ CREATE TABLE biblioteca.libro_genere (
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_0900_ai_ci;
+
+ALTER TABLE biblioteca.libro_genere ADD CONSTRAINT libro_genere_FK FOREIGN KEY (id_libro) REFERENCES biblioteca.books(id);
+ALTER TABLE biblioteca.libro_genere ADD CONSTRAINT libro_genere_FK_1 FOREIGN KEY (id_genere) REFERENCES biblioteca.genere(id);
