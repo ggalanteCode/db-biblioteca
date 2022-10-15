@@ -11,3 +11,10 @@ DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_0900_ai_ci;
 
 ALTER TABLE biblioteca.prestito ADD CONSTRAINT prestito_check CHECK ((durataprestito <= 30));
+
+ALTER TABLE biblioteca.prestito ADD id_book INT NOT NULL;
+ALTER TABLE biblioteca.prestito ADD id_utente INT NOT NULL;
+ALTER TABLE biblioteca.prestito DROP FOREIGN KEY prestito_FK;
+ALTER TABLE biblioteca.prestito DROP FOREIGN KEY prestito_FK_1;
+ALTER TABLE biblioteca.prestito ADD CONSTRAINT prestito_FK FOREIGN KEY (id_book) REFERENCES biblioteca.books(id);
+ALTER TABLE biblioteca.prestito ADD CONSTRAINT prestito_FK_1 FOREIGN KEY (id_utente) REFERENCES biblioteca.utente(id);
