@@ -1,0 +1,8 @@
+CREATE TABLE biblioteca.libro_autore (
+	id_autore INT NOT NULL,
+	id_libro INT NOT NULL,
+	CONSTRAINT libro_autore_un UNIQUE KEY (id_autore,id_libro)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
